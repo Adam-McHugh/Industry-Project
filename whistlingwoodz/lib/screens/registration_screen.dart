@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:whistlingwoodz/screens/login_screen.dart';
+import 'package:whistlingwoodz/screens/wedding_celebrations_screen.dart';
 import 'package:whistlingwoodz/utils/app_utils.dart';
 import 'package:whistlingwoodz/widgets/input_field_widget.dart';
-import 'package:whistlingwoodz/widgets/primary_button_signup.dart';
+import 'package:whistlingwoodz/widgets/reusable_widgets.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -47,18 +48,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             const SizedBox(
               height: 8.0,
             ),
-            // Events block
-            // const Center(
-            //    child: Text(
-            //     "Events",
-            //     style: TextStyle(
-            //       color: colorWhite,
-            //       fontSize: 28.0,
-            //      fontFamily: fontFamily,
-            //       fontWeight: FontWeight.bold,
-            //     ),
-            //  ),
-            //  ),
+
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
@@ -201,7 +191,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             setState(() {
                               genderSelected = val.toString();
                             });
-                            print(genderSelected);
+                            //print(genderSelected);
                           },
                         ),
                       ),
@@ -226,7 +216,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             setState(() {
                               genderSelected = val.toString();
                             });
-                            print(genderSelected);
+                            //print(genderSelected);
                           },
                         ),
                       ),
@@ -239,16 +229,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 25.0,
             ),
             // Primary Sign up button
-            PrimaryButtonSignUp(
-              text: "Sign Up",
-              onPressed: () {
-                if (isValidate()) {
-                  print("Data validated");
-                  // Navigate to landing screen after sign up firebase code still to be implemented.
-                }
-              },
-            ),
-            // Space between Primary Sign up button and Already have an account?
+            firebaseUIButton(context, "Sign Up", () {
+              FirebaseAuth.instance
+                  .createUserWithEmailAndPassword(
+                      email: emailController.text,
+                      password: passwordController.text,
+                      name: nameController.text,
+                      birthDateController.text)
+                  .then((value) {
+                print("Created New Account");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Wedding()));
+              }).onError((error, stackTrace) {
+                print("Error ${error.toString()}");
+              });
+            }),
+            // Space between FirebaseUIButton Sign up button and Already have an account?
             const SizedBox(
               height: 25.0,
             ),

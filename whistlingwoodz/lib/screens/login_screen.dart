@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:whistlingwoodz/screens/registration_screen.dart';
+import 'package:whistlingwoodz/screens/wedding_celebrations_screen.dart';
 import 'package:whistlingwoodz/utils/app_utils.dart';
 import 'package:whistlingwoodz/widgets/input_field_widget.dart';
-import 'package:whistlingwoodz/widgets/primary_button_signup.dart';
+import 'package:whistlingwoodz/widgets/reusable_widgets.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -135,14 +136,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 70.0,
                     ),
                     // Sign In button.
-                    PrimaryButtonSignUp(
-                      text: "Sign In",
-                      onPressed: () {
-                        // validation Method
-                        if (isValidate()) {}
-                      },
-                    ),
-                    // Space between Sign In button and Don't have an account
+                    firebaseUIButton(context, "Sign In", () {
+                      FirebaseAuth.instance
+                          .signInWithEmailAndPassword(
+                              email: emailController.text,
+                              password: passwordController.text)
+                          .then((value) {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Wedding()));
+                      }).onError((error, stackTrace) {
+                        print("Error ${error.toString()}");
+                      });
+                    }),
+                    // Space between FirebaseUIButton and Don't have an account
                     const SizedBox(
                       height: 25.0,
                     ),
