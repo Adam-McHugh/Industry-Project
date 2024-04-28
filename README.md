@@ -1,9 +1,9 @@
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![flutter](https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![firebase](https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white) ![github](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) ![Test Status](https://img.shields.io/badge/Tests-Passed:27/Failed:11/NotApplicable:9-green)
 
 # Welcome to our GitHub page 😉😆💓
-> This is the ctrl-wedding-app repository for the Group 4 CTRL-V team.
+> This is the Whistlingwoodz repository for the Group 4 CTRL-V team Industry Project.
 > 
-> This is a team project for making an app for the WhistlingWoodz event company. The purpose of this project is not only to make the Whistling Woods company known and increase our clientele but also to experience what a real project feels like and learn a lot about working as a team.
+> This is a team project for making an app for the WhistlingWoodz event company. The purpose of this project is not only to make the WhistlingWoodz company known and increase our clientelle but also to experience what a real project feels like and learn a lot about working as a team.
 
 ## Team name: Ctrl+V (Creative Team Resources Lab + Variety)
 ```
@@ -41,7 +41,7 @@ Meaning:
 - Part B
 ```
 1. Documentation - Adam
-2. Programming - Simone, Jin, Brandon
+2. Programming - Simone, Jin, Brandon Adam
 3. Data Analytics & Visualisation - Gavin
 4. Network - Adam
 5. Database - Gavin
@@ -58,11 +58,11 @@ Meaning:
 #  
   
 ### Main points
-- Customers can use the Whistling Woods app to see what events Whistling Woods has to offer.
-- Customers can submit a contact form for their favourite events through the Whistling Woods app.
-- Customers can sign up for and book their favourite events through the Whistling Woods app.
-- Whistling Woods can see which requests have been received through the app.
-- Whistling Woods can expect an increase in visits to their website through the app.  
+- Customers can use the WhistlingWoodz app to see what events WhistlingWoodz has to offer.
+- Customers can submit a contact form for their favourite events through the WhistlingWoodz app.
+- Customers can sign up for and book their favourite events through the WhistlingWoodz app.
+- WhistlingWoodz can see which requests have been received through the app.
+- WhistlingWoodz can expect an increase in visits to their website through the app.  
 #  
     
 ### Directory Structure
@@ -84,7 +84,7 @@ Meaning:
   
   
 ## Feedback
-If you have any feedback, please reach out to me at redrumjh@gmail.com  
+If you have any feedback, please reach out to me at adamlmchugh@outlook.com  
   
 ## License
 It can be copied, modified, and redistributed by others.
